@@ -17,8 +17,7 @@
   <h1>Edit Trip</h1>
 
   <form action="/update/<%= trip.id %>" method="post">
-
-    <div>
+<div>
       <input type="text" name="trip_name" value="<%= trip.trip_name %>">
     </div>
     <div>
@@ -36,16 +35,14 @@
         </option>
         <% } %>
     </select>
-
-    <div>
-     <p> <input type="text" name="date" value="<%= trip.date %>"> <h5>date format mm/dd/yyyy</h5> </p>
-    </div>
+  <div>
+     <p style="display: inline; margin-left:250px;"> <input type="text" name="date" value="<%= trip.date %>"> </p>
+       <p style="float:right;">date format mm/dd/yyyy </p>
+</div>
     <div>
       <button type="submit">Update</button>
     </div>
     </div>
   </form>
-
 </body>
-
 </html>

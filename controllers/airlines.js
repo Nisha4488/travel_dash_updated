@@ -8,4 +8,5 @@ all: function(req, res){
     res.render("trip_details", { trip: results[0] });
   })
 }
+
 }

@@ -4,6 +4,7 @@
   "description": "Create a web app that's as close as possible to the wireframe below.",
   "main": "knexfile.js",
   "dependencies": {
+    "bcrypt": "^2.0.1",
     "connect-session-knex": "^1.4.0",
     "ejs": "^2.6.1",
     "express": "^4.16.3",

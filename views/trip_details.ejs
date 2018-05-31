@@ -16,14 +16,19 @@
 .column {
       flex: 30%;
       padding: 10px;
-      height: 200px;
+      height: 150px;
+    }
+
+    .new{
+      margin-right: 200px;
+      padding:20px;
     }
   </style>
 </head>
 
 <body>
 
-  <img src="<%= trip.img_url %>" alt="">
+<img src="<%= trip.img_url %>" alt="">
   <h1><%=trip.airline_name %></h1>
   <h3><%=trip.description %></h3>
   <h1>Trips Planned</h1>
@@ -44,6 +49,8 @@
       <h3>To:</h3>
       <p>  <%= trip.to %></p><br/>
       <a href="/edit/<%= trip.id %>">Edit</a>
+
+
     </div>
 </body>
 </html>
