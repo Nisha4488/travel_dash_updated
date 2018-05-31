@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Your trips</title>
+    <style media="screen">
+        * {
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            margin: auto;
+            width: 80%;
+        }
+
+        .card {
+            margin: 30px;
+            text-align: center;
+            flex: 1;
+            border: 1px solid black;
+            width: 300px;
+            max-width: 300px;
+        }
+
+        .row {
+            display: flex;
+            width: 80
+        }
+
+        .column {
+            flex: 30%;
+            padding: 10px;
+            height: 200px;
+        }
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Welcome
+        <%= user.user_name %>
+    </h1>
+    <button><a href="/plantrip">Plan a Trip</a></button>
+    <button> <a href="/">Logout</a> </button>
+    <br>
+    <br>
+    <%if (trip.length == 0) {%>
+        <h3>You don't have any trips planned. Click on Plan Trip to plan your first trip!! </h3>
+    <%}%>
+        <div class="container">
+            <%for (let i = 0; i < trip.length; i++) {%>
+                <div class="card">
+                    <div class="row">
+                        <div class="column">
+                            <h3>
+                                <%= trip[i].trip_name %>
+                            </h3>
+                            <p>
+                                <%= trip[i].date %>
+                            </p>
+                        </div>
+                        <div class="column">
+                            <p>AIRLINE:
+                                <a href="/airlines/<%= trip[i].id %>">
+                                    <%= trip[i].airline_name %>
+                                </a>
+                            </p>
+                        </div>
+                        <div class="column">
+                            <p>FROM:
+                                <%= trip[i].from %>
+                            </p>
+                            <p>TO:
+                                <%= trip[i].to %>
+                            </p>
+                            <button><a href="/edit/<%= trip[i].id %>">Edit</a></button>
+                        </div>
+                    </div>
+                    
+
+
+
+                </div>
+                <%}%>
+        </div>
+</body>
+
+</html>

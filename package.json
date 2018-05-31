@@ -1,0 +1,30 @@
+{
+  "name": "travel-dash",
+  "version": "1.0.0",
+  "description": "Create a web app that's as close as possible to the wireframe below.",
+  "main": "knexfile.js",
+  "dependencies": {
+    "connect-session-knex": "^1.4.0",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
+    "knex": "^0.14.6",
+    "pg": "^7.4.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nisha4488/travel-dash.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nisha4488/travel-dash/issues"
+  },
+  "homepage": "https://github.com/Nisha4488/travel-dash#readme"
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style media="screen">
+    * {
+      text-align: center;
+      margin: 20px;
+      padding: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Edit Trip</h1>
+
+  <form action="/update/<%= trip.id %>" method="post">
+
+    <div>
+      <input type="text" name="trip_name" value="<%= trip.trip_name %>">
+    </div>
+    <div>
+      <input type="text" name="from" value="
+  <%= trip.from %>">
+    </div>
+    <div>
+      <input type="text" name="to" value="
+  <%= trip.to %>">
+    </div>
+    <select name="airline_id">
+      <% for(let i = 0; i<airline.length; i++){ %>
+        <option value="<%= airline[i].id %>">
+          <%= airline[i].airline_name %>
+        </option>
+        <% } %>
+    </select>
+
+    <div>
+     <p> <input type="text" name="date" value="<%= trip.date %>"> <h5>date format mm/dd/yyyy</h5> </p>
+    </div>
+    <div>
+      <button type="submit">Update</button>
+    </div>
+    </div>
+  </form>
+
+</body>
+
+</html>
